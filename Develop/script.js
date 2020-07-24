@@ -47,6 +47,10 @@ function generatePassword(howManyChar, upLet, lowLet, numb, char) {
       console.log("User set symbols to True");
     }
   }
+  if (upLet === false && lowLet === false && numb === false && char === false) {
+    alert("Please select at least one character type.");
+    return location.reload();
+  }
   for (var i = 0; i < howManyChar; i++) {
     var randomNum = Math.floor(Math.random() * myArray.length);
     console.log(randomNum);
