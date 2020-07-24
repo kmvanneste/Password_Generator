@@ -16,46 +16,45 @@ var userSpecialChar = confirm("Press OK if you want special characters in your p
 function generatePassword(howManyChar, upLet, lowLet, numb, char) {
   var myArray = [];
   var finalPassword = [];
-  
-  if (howManyChar >= 8 && howManyChar <= 128) {
-    if (upLet === true) {
-        for (var i = 0; i < upperCase.length; i++) {
-          myArray.push(upperCase[i]);
-          console.log("User set Upper case letters to True");
-        }
-      } 
-      if (lowLet === true) {
-        for (var i = 0; i < lowerCase.length; i++) {
-        myArray.push(lowerCase[i]);
-        console.log("User set Upper case letters to True");
-          }
-        } 
-      if (numb === true) {  
-        for (var i = 0; i < numbers.length; i++) {
-        myArray.push(numbers[i]);
-        console.log("User set Upper case letters to True");
-          }
-        } 
-      if (char === true) {  
-        for (var i = 0; i < symbol.length; i++) {
-        myArray.push(symbol[i]);
-        console.log("User set Upper case letters to True");
-          }
-        } 
+  //Converting howManyChar from a string to an integer
+  var howManyChar = parseInt(howManyChar);
 
-      for (var i = 0; i < howManyChar; i++) {
-        var randomNum = Math.floor(Math.random() * myArray.length);
-        console.log(randomNum);
-        finalPassword.push(myArray[randomNum]);
-      }
-    }  
-  else {
-  alert("Please create a password between 8 and 128 characters long.");
-  return location.reload();
-  }      
+  if (howManyChar < 8 || howManyChar > 128) {
+    alert("Please create a password between 8 and 128 characters long.");
+    return location.reload();
+  }
+  if (upLet === true) {
+    for (var i = 0; i < upperCase.length; i++) {
+      myArray.push(upperCase[i]);
+      console.log("User set Upper case letters to True");
+    }
+  }
+  if (lowLet === true) {
+    for (var i = 0; i < lowerCase.length; i++) {
+      myArray.push(lowerCase[i]);
+      console.log("User set Lower case letters to True");
+    }
+  }
+  if (numb === true) {
+    for (var i = 0; i < numbers.length; i++) {
+      myArray.push(numbers[i]);
+      console.log("User set numbers to True");
+    }
+  }
+  if (char === true) {
+    for (var i = 0; i < symbol.length; i++) {
+      myArray.push(symbol[i]);
+      console.log("User set symbols to True");
+    }
+  }
+  for (var i = 0; i < howManyChar; i++) {
+    var randomNum = Math.floor(Math.random() * myArray.length);
+    console.log(randomNum);
+    finalPassword.push(myArray[randomNum]);
+  }
+
   return finalPassword.join("");
 }
-
 
 // Write password to the #password input
 function writePassword() {
@@ -66,4 +65,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
