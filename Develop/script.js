@@ -5,8 +5,6 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var numbers = "1234567890".split("");
 var symbol = "!#$%&*+<=>?@/[]^_`|~".split("");
-var myArray = [];
-var finalPassword = [];
 
 // User Prompts
 var charCount = prompt("How many characters would you like your password to be?");
@@ -16,7 +14,9 @@ var userNumbers = confirm("Press OK if you want numbers in your password.");
 var userSpecialChar = confirm("Press OK if you want special characters in your password.");
 
 function generatePassword(howManyChar, upLet, lowLet, numb, char) {
-
+  var myArray = [];
+  var finalPassword = [];
+  
   if (howManyChar >= 8 && howManyChar <= 128) {
       if (upLet === true) {
         for (var i = 0; i < upperLetters.length; i++) {
@@ -44,10 +44,9 @@ function generatePassword(howManyChar, upLet, lowLet, numb, char) {
         } 
 
       for (var i = 0; i < howManyChar; i++) {
-        var randomNum = Math.floor(Math.random * (myArray.length));
+        var randomNum = Math.floor(Math.random() * myArray.length);
         console.log(randomNum);
-
-        result.push(myArray[randomNum]);
+        finalPassword.push(myArray[randomNum]);
       }
     }  
   else {
@@ -62,9 +61,7 @@ function generatePassword(howManyChar, upLet, lowLet, numb, char) {
 function writePassword() {
   var password = generatePassword(charCount, upperLetters, lowerLetters, userNumbers, userSpecialChar);
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
