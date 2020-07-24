@@ -18,26 +18,26 @@ function generatePassword(howManyChar, upLet, lowLet, numb, char) {
   var finalPassword = [];
   
   if (howManyChar >= 8 && howManyChar <= 128) {
-      if (upLet === true) {
-        for (var i = 0; i < upperLetters.length; i++) {
+    if (upLet === true) {
+        for (var i = 0; i < upperCase.length; i++) {
           myArray.push(upperCase[i]);
           console.log("User set Upper case letters to True");
         }
       } 
       if (lowLet === true) {
-        for (var i = 0; i < lowerLetters.length; i++) {
+        for (var i = 0; i < lowerCase.length; i++) {
         myArray.push(lowerCase[i]);
         console.log("User set Upper case letters to True");
           }
         } 
       if (numb === true) {  
-        for (var i = 0; i < userNumbers.length; i++) {
+        for (var i = 0; i < numbers.length; i++) {
         myArray.push(numbers[i]);
         console.log("User set Upper case letters to True");
           }
         } 
       if (char === true) {  
-        for (var i = 0; i < userSpecialChar.length; i++) {
+        for (var i = 0; i < symbol.length; i++) {
         myArray.push(symbol[i]);
         console.log("User set Upper case letters to True");
           }
@@ -66,3 +66,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
