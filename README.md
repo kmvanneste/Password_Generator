@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/License-Unlicensed-blue.svg" align="right"/>
+
 # Password Generator
 
 The Password Generator web application allows users to generate a random password containing their choice of uppercase letters, lowercase letters, numbers, and symbols between 8 and 128 characters long. 
