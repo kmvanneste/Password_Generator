@@ -33,7 +33,7 @@ To develop the Password Generator I worked with Carlo DeFilippis, Erin Platvoet,
 
 <a href="https://kmvanneste.github.io/Password_Generator/" target="_blank">LINK to view project page</a>
 
-![image](./assets/screenshot.png)
+![image](./Assets/screenshot.png)
 
 
 
