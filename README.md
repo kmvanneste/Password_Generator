@@ -21,6 +21,10 @@ The page will ask the user a series of questions in the form of pop-up windows. 
 - Minimum styling with CSS and Bootstrap
 - JavaScript
 
+## Installation
+
+No installations necessary.
+
 ## Contributions
 
 To develop the Password Generator I worked with Carlo DeFilippis, Erin Platvoet, Ivan Zapata-Rivera, Miguel Jimenez, Andie W, and Maurya.  It was a team effort and would not have been accomplished without Carlo Defilippis willingness to share his extensive background in JavaScript.
@@ -28,6 +32,8 @@ To develop the Password Generator I worked with Carlo DeFilippis, Erin Platvoet,
 ## Links
 
 <a href="https://kmvanneste.github.io/Password_Generator/" target="_blank">LINK to view project page</a>
+
+![image](./assets/screenshot.png)
 
 
 
